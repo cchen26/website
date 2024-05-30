@@ -1,20 +1,22 @@
 import type { Metadata } from "next";
 import { Inter } from "next/font/google";
 import "./globals.css";
-import Navigation from "./navigation";
+
+// Components
+import Navigation from "@/components/navigation/Navigation";
+import ThemeProvider from "@/components/theme/ThemeProvider";
+import GoogleTagManagerHeadScript from "@/components/custom/GoogleTagManagerHeadScript";
+import GoogleTagManagerNoScript from "@/components/custom/GoogleTagManagerNoScript";
+
+// UI components
 import { Separator } from "@/components/ui/separator";
-import { ThemeProvider } from "@/components/theme-provider";
 import { ScrollArea } from "@/components/ui/scroll-area";
 import { Button } from "@/components/ui/button";
 import { PanelBottomOpenIcon } from "lucide-react";
-import {
-  Drawer,
-  DrawerContent,
-  DrawerTrigger,
-} from "@/components/ui/drawer";
+import { Drawer, DrawerContent, DrawerTrigger } from "@/components/ui/drawer";
+
+// Utility functions
 import { cn } from "@/lib/utils";
-import GoogleTagManagerHeadScript from "@/components/custom/GoogleTagManagerHeadScript";
-import GoogleTagManagerNoScript from "@/components/custom/GoogleTagManagerNoScript";
 
 const inter = Inter({ subsets: ["latin"] });
 
